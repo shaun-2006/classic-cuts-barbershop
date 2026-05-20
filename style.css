@@ -1,0 +1,610 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+/* GLOBAL BUTTON STYLE (ALL PAGES) */
+.btn {
+    display: inline-block;
+    background: #ffb84d;
+    color: #fff;
+    padding: 0.75em 1.25em;
+    text-decoration: none;
+    border-radius: 0.5em;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+body.home {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #fff;
+}
+
+/* NAV */
+body.home nav {
+    background: #222;
+    padding: 0.95em;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* LOGO */
+body.home .logo {
+    width: 100px;
+    height: auto;
+}
+
+body.home nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.95em;
+    font-weight: bold;
+}
+
+body.home nav a:hover {
+    color: #f0a500;
+}
+
+/* HEADER */
+body.home header {
+    background: url("images/image1.jpg");
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3.75em 1.25em;
+    color: #e60b0b;
+}
+
+/* SECTIONS */
+body.home section {
+    min-height: 40vh;
+    padding: 3.75em 1.25em;
+}
+
+body.home .section {
+    max-width: 56.25em;
+    margin: auto;
+    padding: 1.9em;
+    box-shadow: 0 0 0.625em rgba(0,0,0,0.1);
+    border-radius: 0.5em;
+}
+
+body.about {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    line-height: 1.6;
+}
+
+/* NAV */
+body.about nav {
+    background: #222;
+    padding: 0.95em;
+    text-align: center; 
+}
+
+body.about nav a {
+    color: #fff;
+    margin: 0 0.95em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HEADER */
+body.about header {
+    text-align: center;
+    padding: 5em 1.25em;
+    background: #000;
+    color: #fff;
+}
+
+/* GENERAL SECTION SPACING */
+body.about section {
+    padding: 3.75em 1.25em;
+    max-width: 62.5em;
+    margin: auto;
+}
+
+/* ABOUT IMAGE */
+body.about .about-img {
+    float: left;
+    width: 17.5em;
+    max-width: 100%;
+    margin: 0 1.25em 1.25em 0;
+    border-radius: 0.5em;
+}
+
+/* WHY CHOOSE US */
+body.about .section h3 {
+    font-size: 1.75em;
+    margin-bottom: 0.75em;
+}
+
+body.about .section h4 {
+    margin-top: 1em;
+    font-size: 1.25em;
+}
+
+/* BARBERS SECTION */
+body.about .barbers-section {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 5em 1.25em;
+}
+
+/* TITLE */
+body.about .barbers-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+/* CONTAINER */
+body.about .barbers-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2.5em;
+}
+
+/* BARBER CARD */
+body.about .barber-card {
+    width: 13.75em;
+    text-align: center;
+}
+
+/* IMAGES */
+body.about .barber-card img {
+    width: 8.75em;
+    height: 8.75em;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.95em;
+}
+
+/* TEXT */
+body.about .barber-card h3,
+body.about .barber-card h6 {
+    font-size: 1.1em;
+    margin: 0.6em 0 0.3em;
+}
+
+body.about .barber-card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+body.about .barber-card span {
+    font-size: 0.8em;
+    color: #777;
+}
+
+/* FOOTER */
+body.about footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 0.95em;
+}
+
+body.gallery {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    line-height: 1.6;
+}
+
+/* NAV */
+body.gallery nav {
+    background: #222;
+    padding: 0.95em;
+    text-align: center;
+}
+
+body.gallery nav a {
+    color: #fff;
+    margin: 0 0.95em;
+    text-decoration: none;
+}
+
+/* HEADER */
+body.gallery header {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 5em 1.25em;
+}
+
+/* GRID */
+body.gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25em;
+    padding: 1.25em;
+}
+
+body.gallery .gallery-grid img {
+    width: 100%;
+    max-width: 15.6em;
+    border-radius: 0.625em;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+body.gallery .gallery-grid figure:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+body.gallery h2,
+body.gallery p {
+    text-align: center;
+}
+
+body.contact {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    line-height: 1.6;
+}
+
+/* NAV */
+body.contact nav {
+    background: #222;
+    padding: 0.95em;
+    text-align: center;
+}
+
+body.contact nav a {
+    color: #fff;
+    margin: 0 0.95em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body.contact nav a:hover {
+    color: #f0a500;
+}
+
+/* HEADER */
+body.contact header {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 5em 1.25em;
+}
+
+/* CONTACT SECTION */
+body.contact .contact-container {
+    max-width: 68.75em;
+    margin: auto;
+    padding: 2.5em 1.25em;
+
+    display: flex;
+    gap: 2.5em;
+}
+
+/* LEFT SIDE */
+body.contact .contact-info {
+    flex: 1;
+
+    background: #f4f4f4;
+    padding: 1.9em;
+    border-radius: 0.5em;
+}
+
+/* RIGHT SIDE */
+body.contact .contact-form {
+    flex: 1;
+
+    background: #fff;
+    padding: 1.9em;
+
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.625em rgba(0,0,0,0.1);
+}
+
+/* FORM */
+body.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.95em;
+}
+
+body.contact input,
+body.contact textarea {
+    padding: 0.75em;
+    border: 0.06em solid #ccc;
+    border-radius: 0.3em;
+    font-size: 1em;
+}
+
+body.contact button {
+    background: #f0a500;
+    color: #fff;
+    padding: 0.75em;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+body.contact button:hover {
+    background: #cf8500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 48em) {
+
+    body.contact .contact-container {
+        flex-direction: column;
+    }
+
+}
+
+body.feedback {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    line-height: 1.6;
+}
+
+/* NAV */
+body.feedback nav {
+    background: #222;
+    padding: 0.95em;
+    text-align: center;
+}
+
+body.feedback nav a {
+    color: #fff;
+    margin: 0 0.95em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body.feedback nav a:hover {
+    color: #f0a500;
+}
+
+/* HEADER */
+body.feedback header {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 5em 1.25em;
+}
+
+/* FEEDBACK SECTION */
+body.feedback .feedback-section {
+    max-width: 37.5em;
+    margin: 3em auto;
+    padding: 1.9em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* FORM */
+body.feedback .feedback-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.95em;
+    text-align: left;
+    width: 100%;
+}
+
+/* INPUTS */
+body.feedback .feedback-section input,
+body.feedback .feedback-section textarea,
+body.feedback .feedback-section select {
+    width: 100%;
+    padding: 0.75em;
+    border: 0.06em solid #ccc;
+    border-radius: 0.3em;
+    font-size: 1em;
+}
+
+/* BUTTON */
+body.feedback .feedback-section button {
+    background: #f4ab03;
+    color: #fff;
+    padding: 0.75em;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+/* REVIEWS SECTION */
+body.feedback .reviews-section {
+    padding: 3.75em 1.25em;
+}
+
+body.feedback .reviews-section h2 {
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 1.1;
+}
+
+/* REVIEWS GRID */
+body.feedback .reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.9em;
+
+    max-width: 68.75em;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* REVIEW BOX */
+body.feedback .reviews-section .review-box {
+    background: #fff;
+    padding: 1.9em;
+    border-radius: 0.75em;
+    box-shadow: 0 0 0.625em rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+/* TOP PART */
+body.feedback .reviews-section .review-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25em;
+}
+
+/* REVIEW NAME */
+body.feedback .reviews-section .review-top h3 {
+    margin: 0;
+    font-size: 1.9em;
+}
+
+/* STARS */
+body.feedback .reviews-section .stars {
+    color: gold;
+    font-size: 1.25em;
+}
+
+/* REVIEW TEXT */
+body.feedback .reviews-section .review-box p {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 1.25em;
+}
+
+/* DATE */
+body.feedback .reviews-section .date {
+    color: #999;
+    font-size: 0.95em;
+}
+
+/* RESPONSIVE */
+@media (max-width: 56.25em) {
+    body.feedback .reviews {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 37.5em) {
+    body.feedback .reviews {
+        grid-template-columns: 1fr;
+    }
+
+    body.gallery .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body.contact .contact-container {
+        flex-direction: column;
+    }
+
+    body.about .about-img {
+        float: none;
+        display: block;
+        margin: 0 auto 1.25em;
+    }
+}
+/* MOBILE RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    /* NAVIGATION */
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+        font-size: 1rem;
+    }
+
+    /* HEADERS */
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    /* SECTIONS */
+    section {
+        padding: 2rem 1rem;
+    }
+
+    /* HOME PAGE */
+    body.home header {
+        min-height: 50vh;
+        background-position: center;
+        background-size: cover;
+    }
+
+    /* ABOUT PAGE */
+    body.about .barbers-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body.about .barber-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* GALLERY */
+    body.gallery .gallery-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    body.gallery .gallery-grid img {
+        max-width: 100%;
+    }
+
+    /* CONTACT PAGE */
+    body.contact .contact-container {
+        flex-direction: column;
+    }
+
+    /* FEEDBACK REVIEWS */
+    body.feedback .reviews {
+        grid-template-columns: 1fr;
+    }
+
+    /* TEXT */
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p,
+    li,
+    a {
+        font-size: 1rem;
+    }
+
+    /* BUTTONS */
+    .btn,
+    button {
+        width: 100%;
+        text-align: center;
+    }
+}
